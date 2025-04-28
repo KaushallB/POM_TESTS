@@ -1,7 +1,7 @@
 import time
 from selenium import webdriver
 from src.pages.newlogin import Loginpage
-from src.pages.buystockpage import StocksBuy
+from src.pages.stockmgmtpage import AddStocks
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -21,30 +21,39 @@ def test_buy_stock():
         loginpage.click_login()
         time.sleep(10)
 
-        url="http://localhost:3000/buy"
+        url="http://localhost:3000/stockmanagement"
         driver.get(url)
-        time.sleep(20)
-        buystocks = StocksBuy(driver)
+        time.sleep(10)
+        addstocks = AddStocks(driver)
 
         WebDriverWait(driver,10).until(
             EC.url_to_be(url)
         )
         
-        time.sleep(5)
-
-        buystocks.select_stock('AIHDF')
         time.sleep(10)
 
-        buystocks.input(10)
+        addstocks.click_add()
+        time.sleep(3)
+
+        addstocks.enter_symbol('INTU')
         time.sleep(5)
 
-        buystocks.buy_stock()
+        addstocks.enter_companyname('Intuji')
         time.sleep(5)
+
+        addstocks.select_sector('Others')
+        time.sleep(5)
+
+        addstocks.description("Best IT Company In Nepal")
+        time.sleep(3)
+
+        addstocks.click_save()
+        time.sleep(8)
 
         driver.quit()
 
     except Exception as e:
-        driver.save_screenshot("Buy_Stocks_Error.png")
+        driver.save_screenshot("Add_stocks_failure.png")
         print(f"Test Login failed: {e}")
         raise
 

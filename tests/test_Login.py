@@ -4,6 +4,7 @@ from selenium import webdriver
 
 from src.pages.loginpage import Loginpage
 
+
 def test_login():
     try:
         driver=webdriver.Chrome()

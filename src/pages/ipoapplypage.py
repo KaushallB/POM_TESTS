@@ -9,7 +9,7 @@ class Ipoapply(PF):
 
     # Locators
     locators={
-        "apply_button":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/div[2]/table/tbody/tr[2]/td[7]/a'),   #need to replace this by inspecting and copying xpath of the a tag
+        "apply_button":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/div[2]/table/tbody/tr[1]/td[7]/a'),   #need to replace this by inspecting and copying xpath of the a tag
         "kitta_input" :(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/div/div/div[1]/div/input'),
         "checkbox":(By.XPATH,'//*[@id="terms"]'),
         "submitbutton":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/div/div/button')
