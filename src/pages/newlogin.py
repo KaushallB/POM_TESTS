@@ -10,11 +10,11 @@ class Loginpage(PF):
        "login":("XPATH","//button[text()='Login']")
     }
 
-    def enter_email(self):
-        self.email.set_text('Kaushalaaa@gmail.com')
+    def enter_email(self,email):
+        self.email.set_text(email)
     
-    def enter_pw(self):
-        self.pw.set_text('Kaushal@123')
+    def enter_pw(self,password):
+        self.pw.set_text(password)
 
     def click_login(self):
         self.login.click()
