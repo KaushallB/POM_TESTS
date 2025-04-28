@@ -19,7 +19,7 @@ Follow the steps below to set up the environment and install the necessary depen
 2. **Install the required Python packages**:
     Run the following command to install all the dependencies listed in this repository:
     ```bash
-    pip install selenium pytest seleniumpagefactory
+    pip install selenium pytest selenium-page-factory
     ```
 
 ## Running the Tests
