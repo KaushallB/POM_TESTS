@@ -16,7 +16,7 @@ def test_buy_stock():
         driver.get("http://localhost:3000/login")
         loginpage=Loginpage(driver)
 
-        loginpage.enter_email('KaushalB@gmail.com')
+        loginpage.enter_email('KaushalIntujii@gmail.com')
         loginpage.enter_pw('Kaushal@123')
         loginpage.click_login()
         time.sleep(10)
@@ -35,10 +35,10 @@ def test_buy_stock():
         addstocks.click_add()
         time.sleep(3)
 
-        addstocks.enter_symbol('INTU')
+        addstocks.enter_symbol('INTUJ')
         time.sleep(5)
 
-        addstocks.enter_companyname('Intuji')
+        addstocks.enter_companyname('Intuji Inc')
         time.sleep(5)
 
         addstocks.select_sector('Others')
@@ -48,7 +48,13 @@ def test_buy_stock():
         time.sleep(3)
 
         addstocks.click_save()
-        time.sleep(8)
+        time.sleep(4)
+
+        addstocks.search_stock('INTU')
+        time.sleep(5)
+
+        addstocks.click_search()
+        time.sleep(10)
 
         driver.quit()
 

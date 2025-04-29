@@ -16,7 +16,7 @@ def test_buy_stock():
         driver.get("http://localhost:3000/login")
         loginpage=Loginpage(driver)
 
-        loginpage.enter_email('KaushalB@gmail.com')
+        loginpage.enter_email('KaushalIntujii@gmail.com')
         loginpage.enter_pw('Kaushal@123')
         loginpage.click_login()
         time.sleep(10)
@@ -39,7 +39,7 @@ def test_buy_stock():
         time.sleep(5)
 
         buystocks.buy_stock()
-        time.sleep(5)
+        time.sleep(10)
 
         driver.quit()
 

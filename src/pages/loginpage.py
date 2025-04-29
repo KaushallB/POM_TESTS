@@ -11,7 +11,7 @@ class Loginpage(PF):
     }
 
     def enter_email(self):
-        self.email.set_text('Kaushalaaa@gmail.com')
+        self.email.set_text('KaushalInt@gmail.com')
     
     def enter_pw(self):
         self.pw.set_text('Kaushal@123')

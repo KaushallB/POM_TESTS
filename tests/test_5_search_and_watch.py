@@ -13,7 +13,7 @@ def test_add():
         driver.get("http://localhost:3000/login")
         login_page=Loginpage(driver)
 
-        login_page.enter_email('KaushalBiku@gmail.com')
+        login_page.enter_email('KaushalIntujii@gmail.com')
         login_page.enter_pw('Kaushal@123')
         login_page.click_login()
         time.sleep(5) 
@@ -28,12 +28,14 @@ def test_add():
         addtowatchlist.click_button()
         time.sleep(5)
 
+        driver.quit()
+
     except Exception as e:
         driver.save_screenshot("SearchandAddError.png")
         print(f"Test Login failed: {e}")
         raise
 
-    driver.quit()
+    
 
 
 

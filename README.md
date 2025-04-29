@@ -28,3 +28,10 @@ After installing the dependencies, you can run the tests using the following com
 
 ```bash
 pytest tests/test_buy_stocks.py -s
+```
+
+If you want to run all the tests automatically then Goto cd POM_TESTS:
+
+```bash
+pytest tests -s -v
+```

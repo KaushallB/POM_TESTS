@@ -17,6 +17,8 @@ class AddStocks(PF):
         "select":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/div[2]/div[3]/div/form/div[3]/select'),
         "desc":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/div[2]/div[3]/div/form/div[4]/textarea'),
         "save":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/div[2]/div[3]/div/form/div[5]/button[1]'),
+        "search_bar":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/form/input'),
+        "search":(By.XPATH,'//*[@id="root"]/div/div[2]/div[2]/div[2]/div/form/button'),
         }
        
     
@@ -42,5 +44,11 @@ class AddStocks(PF):
     def click_save(self):
         self.save.click()
 
+    def search_stock(self,stock_name):
+        self.search_bar.set_text(stock_name)
+
+    def click_search(self):
+        self.search.click()
+        
 
     

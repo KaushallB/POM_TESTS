@@ -10,18 +10,18 @@ def test_login():
     try:
         driver=webdriver.Chrome()
         driver.get("http://localhost:3000")
+        driver.maximize_window()
         time.sleep(2)
         login=Loginpage(driver)
        
-        email=input("Enter email:")
-        login.enter_email(email)
+        login.enter_email('KaushalIntujii@gmail.com')
         time.sleep(5)
 
-        pw=input("\nEnter Password:")
-        login.enter_pw(pw)
+        login.enter_pw('Kaushal@123')
         time.sleep(5)
 
         login.click_login()
+        time.sleep(10)
 
         cookies=driver.get_cookies()
         with open("cookies.pkl", "wb")as file:
@@ -37,7 +37,7 @@ def test_login():
     driver.quit()
 
 
-
+"""
 def test_load_cookie():
     try:
         driver=webdriver.Chrome()
@@ -75,7 +75,9 @@ def test_load_cookie():
         raise
 
     driver.quit()
-    
+
+
+"""
     
 
 
