@@ -12,8 +12,8 @@ Follow the steps below to set up the environment and install the necessary depen
 
 1. **Clone the repository**:
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-directory>
+    git clone https://github.com/KaushallB/POM_TESTS.git
+    
     ```
 
 2. **Install the required Python packages**:
